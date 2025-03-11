@@ -375,13 +375,17 @@ PS> start-hawktenantinvestigation
 **Azure AD**
 
 PS> Get-MsolDomain | Format-List 
+
 PS> Get-AzureADDomain | Format-List (newer version of the command above)
+
 PS> Get-MsolFederationProperty -DomainName ******* | Format-List
 
 **Exchange Online** (unclear if these can be changed, Exchange Online PowerShell APIs to configure these state they only work for on-prem Exchange)
 
 PS> Get-FederationTrust | Format-List
+
 PS> Get-FederatedOrganizationIdentifier -IncludeExtendedDomainInfo  | Format-List
+
 PS> Get-FederatedOrganizationIdentifier -IncludeExtendedDomainInfo | select-object -expandproperty Domains  
 
 ### Commands to manually audit service principals
